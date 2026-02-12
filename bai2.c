@@ -1,7 +1,7 @@
 /******************************************************************************
- * Họ và tên: [ĐIỀN TÊN TẠI ĐÂY]
- * MSSV:      [ĐIỀN MSSV TẠI ĐÂY]
- * Lớp:       [ĐIỀN LỚP TẠI ĐÂY]
+ * Họ và tên: [Phạm Nguyễn Ngọc Triều]
+ * MSSV:      [PS49280]
+ * Lớp:       [CS21301]
  *****************************************************************************/
 
 //  BÀI 2: TÌM GIÁ TRỊ LỚN NHẤT VÀ NHỎ NHẤT TRONG MẢNG 
@@ -10,3 +10,35 @@
 
 // VIẾT CODE Ở ĐÂY
 
+#include <stdio.h>
+
+int main() {
+    int n;
+    int max, min;
+
+    printf("Nhap so phan tu cua mang: ");
+    scanf("%d", &n);
+
+    int arr[n];
+    for (int i = 0; i < n; i++) {
+        printf("Nhap phan tu thu %d: ", i);
+        scanf("%d", &arr[i]);
+    }
+
+    max = arr[0]; //gán max là phần tử đầu
+    min = arr[0];
+
+    for (int i = 1; i < n; i++) { // so sánh max min
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+    }
+
+    printf("Gia tri lon nhat trong mang la: %d\n", max);
+    printf("Gia tri nho nhat trong mang la: %d\n", min);
+
+    return 0;
+}

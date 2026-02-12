@@ -1,7 +1,7 @@
 /******************************************************************************
- * Họ và tên: [ĐIỀN TÊN TẠI ĐÂY]
- * MSSV:      [ĐIỀN MSSV TẠI ĐÂY]
- * Lớp:       [ĐIỀN LỚP TẠI ĐÂY]
+ * Họ và tên: [Phạm Nguyễn Ngọc Triều]
+ * MSSV:      [PS49280]
+ * Lớp:       [CS21301]
  *****************************************************************************/
 
 //  BÀI 4: TÍNH BÌNH PHƯƠNG CÁC PHẦN TỬ TRONG MẢNG 2 CHIỀU 
@@ -10,3 +10,33 @@
 
 // VIẾT CODE Ở ĐÂY
 
+#include <stdio.h>
+
+int main() {
+    int n, m;
+    printf("Nhap so hang: ");
+    scanf("%d", &n);
+    printf("Nhap so cot: ");
+    scanf("%d", &m);
+
+    int a[100][100]; // giả sử tối đa 100x100
+
+    // Nhap ma tran
+    printf("Nhap cac phan tu cua ma tran:\n");
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            scanf("%d", &a[i][j]);
+        }
+    }
+
+    // Xuat ma tran binh phuong
+    printf("Ma tran binh phuong:\n");
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            printf("%d ", a[i][j] * a[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
