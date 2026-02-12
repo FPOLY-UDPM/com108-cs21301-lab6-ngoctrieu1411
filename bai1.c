@@ -1,7 +1,7 @@
 /******************************************************************************
- * Họ và tên: [ĐIỀN TÊN TẠI ĐÂY]
- * MSSV:      [ĐIỀN MSSV TẠI ĐÂY]
- * Lớp:       [ĐIỀN LỚP TẠI ĐÂY]
+ * Họ và tên: [Phạm Nguyễn Ngọc Triều]
+ * MSSV:      [PS49280]
+ * Lớp:       [CS21301]
  *****************************************************************************/
 
 //  BÀI 1: TÍNH TRUNG BÌNH TỔNG CÁC SỐ CHIA HẾT CHO 3 TRONG MẢNG 
@@ -11,3 +11,27 @@
 
 // VIẾT CODE Ở ĐÂY
 
+#include <stdio.h>
+int main(){
+    int i,n;
+    printf("xin nhap vao n:");
+    scanf("%d",&n);
+    int arr_1[n];
+   for(i=0;i<n;i++) {
+        printf("xin mời nhập vào số %d: ",i);
+        scanf("%d",&arr_1[i]);
+    }
+    float tong=0;
+    float Tb=0;
+    int count;
+    for(i=0;i<n;i++){
+        if(arr_1[i]%2!=0){
+            tong+= arr_1[i];
+            count++;
+        }
+        
+    }
+    Tb=tong/count;
+    printf("vậy kết quả là %2f",Tb);
+    return 0;
+}
